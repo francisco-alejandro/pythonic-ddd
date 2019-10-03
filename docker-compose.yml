@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  user-domain:
+    container_name: user-domain
+    build:
+      context: .
+      args:
+        PYTHON_ENV: $PYTHON_ENV
