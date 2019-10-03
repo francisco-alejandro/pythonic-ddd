@@ -4,11 +4,14 @@ from flask.json import JSONEncoder
 
 from src.shared.utils import singleton
 
+
 def resource_not_found(error):
     return jsonify(error=str(error)), 404
 
+
 def unprocessable_request(error):
     return jsonify(error=str(error)), 422
+
 
 class _DecimalEncoder(JSONEncoder):
     def default(self, o):
