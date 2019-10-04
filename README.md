@@ -1,15 +1,15 @@
 # Pythonic Application Architecture
 
 
-This repo its a demo that describes an architecture known as the onion architecture. It uses the dependency injection principle extensively, and it is profoundly influenced by the Domain Driven Design (DDD) principles and some functional programming principles.
+This repo is a demo describing an architecture known as the onion architecture. It uses the dependency injection principle extensively, and it is profoundly influenced by the Domain Driven Design (DDD) principles and some functional programming principles.
 
-This layers implmentation means that we have a reference from one of the outer layers (infrastructure) to one of the inside layers (domain). In the onion architecture we are only allowed to reference from the outer layers to the inner layers and not the other way around.
+This layers implementation means that we have a reference from one of the outer layers (infrastructure) to one of the inside layers (domain). In the onion architecture we are only allowed to reference from the outer layers to the inner layers and not the other way around.
 
-So, in each subdomain whe can found three layers:
+So, in each subdomain we can found three layers:
 
- - Domain: Where entites (main domain objects) are defined. In a nutshell,  we try to create a useful model of some problem, defining rules and events
- -  Application: It describe ways that our software can be used. So it defines the solution to a business logic problem
- -  Infraestructure: Here we can found controllers and repositories. Repositories are used in order to retrieve domain objects from persistence technologies using software design principles like the Liskov Subsitution Principle. Controllers can be the single place to capture all the defined use cases and manage all HTTP stuffs, like jsonify or get query params.
+ - Domain: Where entities (main domain objects) are defined. In a nutshell, we try to create a useful model of some problem, defining rules and events
+ -  Application: It describes ways that our software can be used. It defines then the solution to a business logic problem
+ -  Infrastructure: Here we can found controllers and repositories. Repositories are used in order to retrieve domain objects from persistence technologies using software design principles like the Liskov Subsitution Principle. Controllers can be the single place to capture all the defined use cases and manage all HTTP stuffs, like jsonify or get query params.
  
 
 !["The Clean Architecture". From the golden Uncle Bob archives.](https://khalilstemmler.com/img/blog/ddd-intro/clean.jpg)
@@ -39,7 +39,6 @@ It implements three endpoints.
 
 > bash run-docker.sh
 
- inside root project folder. By default app listens in 5280 port, but it can be changed using environment variables, see **services.envar** file. run-docker.sh script also creates demo data to test the app
- 
+ inside root project folder. By default app listens in 5280 port, but it can be changed using environment variables, see **services.envar** file. run-docker.sh script also creates demo data to test the app
 
  
